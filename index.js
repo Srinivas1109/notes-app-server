@@ -16,9 +16,7 @@ const {MONGO_URL} = require("./Src/Auth/Auth")
 // console.log(MONGO_URL)
 
 app.use(cors({
-    origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
+    origin:'https://my-keep-notes.herokuapp.com/', 
 }))
 
 mongoose.connect(MONGO_URL,{
