@@ -3,7 +3,7 @@ const cors = require("cors")
 const bodyParser = require('body-parser')
 
 const app = express()
-const PORT = 5000
+const PORT = 80
 
 const routes = require('./Src/Routes/routes')
 
@@ -14,9 +14,9 @@ const mongoose = require('mongoose');
 
 const {MONGO_URL} = require("./Src/Auth/Auth")
 // console.log(MONGO_URL)
-
+// https://my-keep-notes.herokuapp.com
 app.use(cors({
-    origin:'https://my-keep-notes.herokuapp.com/', 
+    origin:'http://192.168.137.1:5000', 
 }))
 
 mongoose.connect(MONGO_URL,{
