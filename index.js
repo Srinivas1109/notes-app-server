@@ -16,7 +16,7 @@ const {MONGO_URL} = require("./Src/Auth/Auth")
 // console.log(MONGO_URL)
 // https://my-keep-notes.herokuapp.com
 app.use(cors({
-    origin:'http://192.168.137.1:5000', 
+    origin:"http://192.168.137.1:5000", 
     credentials: true,
 }))
 
