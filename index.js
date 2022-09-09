@@ -3,7 +3,7 @@ const cors = require("cors")
 const bodyParser = require('body-parser')
 
 const app = express()
-const PORT = 80
+const PORT = 3000
 
 const routes = require('./Src/Routes/routes')
 
@@ -25,7 +25,7 @@ mongoose.connect(MONGO_URL,{
     useUnifiedTopology: true 
 }).then(()=>{
     console.log("Data base connection successful..")
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || PORT, () => {
         console.log(`Server listening on ${PORT}...`)
     })
 }).catch((err)=>{
